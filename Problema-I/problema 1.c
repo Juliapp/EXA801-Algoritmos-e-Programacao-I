@@ -1,13 +1,14 @@
 /***************************
-Autor: Juliana Aragão Pinto
+Autor: Juliana Aragï¿½o Pinto
 Componente Curricular: Algoritmos I
 Concluido em: 14/10/2017
-Declaro que este código foi elaborado por mim de forma individual e não contém nenhum
-trecho de código de outro colega ou de outro autor, tais como provindos de livros e
-apostilas, e páginas ou documentos eletrônicos da Internet. Qualquer trecho de código
-de outra autoria que não a minha está destacado com uma citação para o autor e a fonte
-do código, e estou ciente que estes trechos não serão considerados para fins de avaliação.
+Declaro que este cï¿½digo foi elaborado por mim de forma individual e nï¿½o contï¿½m nenhum
+trecho de cï¿½digo de outro colega ou de outro autor, tais como provindos de livros e
+apostilas, e pï¿½ginas ou documentos eletrï¿½nicos da Internet. Qualquer trecho de cï¿½digo
+de outra autoria que nï¿½o a minha estï¿½ destacado com uma citaï¿½ï¿½o para o autor e a fonte
+do cï¿½digo, e estou ciente que estes trechos nï¿½o serï¿½o considerados para fins de avaliaï¿½ï¿½o.
 ******************************/
+//testando o compilador de celular
 
 #include <stdio.h>
 #include <string.h>
@@ -16,32 +17,32 @@ do código, e estou ciente que estes trechos não serão considerados para fins de 
 
  /*
 Bibliotecas usadas: 
-Imput output (entrada e saída de dados)
-String (manipulação de strings)
-Stdlib (alocação de memória)
-Locale (biblioteca para incluir os caracteres da língua portuguesa)
+Imput output (entrada e saï¿½da de dados)
+String (manipulaï¿½ï¿½o de strings)
+Stdlib (alocaï¿½ï¿½o de memï¿½ria)
+Locale (biblioteca para incluir os caracteres da lï¿½ngua portuguesa)
 */
 
 int main (){
 	
-	//Declaração para a aparição dos caracteres da língua portuguesa no código
+	//Declaraï¿½ï¿½o para a apariï¿½ï¿½o dos caracteres da lï¿½ngua portuguesa no cï¿½digo
 	
 	setlocale(LC_ALL, "");
 	
-	//Declaração das variáveis parte 1 (cadastro)
+	//Declaraï¿½ï¿½o das variï¿½veis parte 1 (cadastro)
 	
 	char bairro[30], crianca[30];
 	int menu = 0, dia = 0, mes = 0, ano = 0, anoCrianca = 0, mesCrianca = 0, diaCrianca = 0, sexo = 0, microcefalia = 0, problemacardiaco = 0, diabetes = 0, plano = 0, cadastradas = 0;
 	float peso;
 	
-	// Declaração das variáveis parte 2.
+	// Declaraï¿½ï¿½o das variï¿½veis parte 2.
 	
-	/*A parte 2 se refere a um complemento da parte 1, visando o processo para gerar o relatório final, 
-	e também as atribuições de valores iniciais para algumas variáveis */
+	/*A parte 2 se refere a um complemento da parte 1, visando o processo para gerar o relatï¿½rio final, 
+	e tambï¿½m as atribuiï¿½ï¿½es de valores iniciais para algumas variï¿½veis */
 	
 	int recorrente = 0, feminino = 0, masculino = 0, microcefaliapositivo = 0, cardiacopositivo = 0, diabetespositivo = 0, planonegativo = 0, retorno = 0, respincorreta = 0;
 	
-	/*As variáveis abaixo irão fazer parte da coleta de dados referente as porcentagens mostradas no relatório*/
+	/*As variï¿½veis abaixo irï¿½o fazer parte da coleta de dados referente as porcentagens mostradas no relatï¿½rio*/
 	
 	float percentfem, percentmasc, percentMP, percentCP, percentDP, percentPN;
 	
@@ -49,23 +50,23 @@ int main (){
 	
 	//Inicio do programa
 	
-	/* Primeiramente o usuário terá que registrar o nome do bairro e a data que está sendo realizada
-	a pesquisa. Com essa espécie de "pré cadastro" o usuário não precisará registrar o bairro e data
+	/* Primeiramente o usuï¿½rio terï¿½ que registrar o nome do bairro e a data que estï¿½ sendo realizada
+	a pesquisa. Com essa espï¿½cie de "prï¿½ cadastro" o usuï¿½rio nï¿½o precisarï¿½ registrar o bairro e data
 	a cada novo cadastro feito */
 	
 	
-	printf("Digite o nome do bairro em que será realizada esta pesquisa:\n\n");
+	printf("Digite o nome do bairro em que serï¿½ realizada esta pesquisa:\n\n");
 	scanf("%[^\n]s", &bairro);
 	system("cls");
 	fflush(stdin);
-	//A string é contabilizada até o usuário apertar enter, dando a possibilidade de registro de um nome composto.
+	//A string ï¿½ contabilizada atï¿½ o usuï¿½rio apertar enter, dando a possibilidade de registro de um nome composto.
 
 	
 	printf("Digite a data atual no formato dd/mm/aaaa\n\n");
 	scanf("%d/%d/%d", &dia, &mes, &ano);
 	system("cls");
 	fflush(stdin);
-	//O dia, mês e ano são separadas pela barra "/"
+	//O dia, mï¿½s e ano sï¿½o separadas pela barra "/"
 	
 	
 	// Inicio do menu.
@@ -78,14 +79,14 @@ int main (){
 			menu = 0;
 				
 			if (respincorreta == 0){
-				/*A variável respincorreta contabiliza a vez que você deu uma etrada incorreta para exibir a mensagem de erro. 
-				A mesma variável aparece diversas vezes ao longo do código.*/
+				/*A variï¿½vel respincorreta contabiliza a vez que vocï¿½ deu uma etrada incorreta para exibir a mensagem de erro. 
+				A mesma variï¿½vel aparece diversas vezes ao longo do cï¿½digo.*/
 				
 				system("cls");
 				printf("\t\t\t\tMenu inicial.\n\n");
-				printf("Digite a opção que desejar:\n\n\n\n\n");
-				printf("[1] - Cadastrar uma nova criança.\n");
-				printf("[2] - Gerar um relatório geral.\n");
+				printf("Digite a opï¿½ï¿½o que desejar:\n\n\n\n\n");
+				printf("[1] - Cadastrar uma nova crianï¿½a.\n");
+				printf("[2] - Gerar um relatï¿½rio geral.\n");
 				printf("[0] - Fechar o programa.\n\n");
 				scanf("%d", &menu);
 				respincorreta = respincorreta + 1;
@@ -93,10 +94,10 @@ int main (){
 			
 			else if (respincorreta != 0){
 				system("cls");
-				printf("\t\t\t\tMenu inicial.\n\nDigite a opção que desejar:\n\n\n");
+				printf("\t\t\t\tMenu inicial.\n\nDigite a opï¿½ï¿½o que desejar:\n\n\n");
 				printf("Resposta incorreta. Digite novamente.\n\n");
 				printf("[1] - Cadastro.\n");
-				printf("[2] - Gerar um relatório geral.\n");
+				printf("[2] - Gerar um relatï¿½rio geral.\n");
 				printf("[0] - Fechar o programa.\n\n");
 				scanf("%d", &menu); 
 				respincorreta = respincorreta +1;
@@ -104,13 +105,13 @@ int main (){
 				
 		}while(menu != 1 && menu != 2 && menu != 0);
 		
-	/*A estrutura do programa foi toda realizada no formato acima. O usuário digita
-	o valor 1 ou 2, e o programa retorna para a parte escolhida. Caso o valor que o usuário
-	colocar for diferente de 1 ou 2, o programa automaticamente informa que a resposta é 
+	/*A estrutura do programa foi toda realizada no formato acima. O usuï¿½rio digita
+	o valor 1 ou 2, e o programa retorna para a parte escolhida. Caso o valor que o usuï¿½rio
+	colocar for diferente de 1 ou 2, o programa automaticamente informa que a resposta ï¿½ 
 	invalida e gera um loop com o comando "goto" de volta a pergunta.*/
 	
-	/*No cadastro a estrutura se mantém a mesma, divergindo que na hora em que o usuario fizer
-	sua escolha, os dados necessários serão armazenados para gerar o relatório final.*/
+	/*No cadastro a estrutura se mantï¿½m a mesma, divergindo que na hora em que o usuario fizer
+	sua escolha, os dados necessï¿½rios serï¿½o armazenados para gerar o relatï¿½rio final.*/
 			
 			
 			switch (menu){
@@ -120,10 +121,10 @@ int main (){
 					system("cls");
 					
 					fflush(stdin);
-					printf("Digite o nome da criança: \n\n");
+					printf("Digite o nome da crianï¿½a: \n\n");
 					scanf("%[^\n]s", &crianca);
 									
-					// A variável para o nome da criança foi criada para o programa se tornar mais interativo com o usuário. 
+					// A variï¿½vel para o nome da crianï¿½a foi criada para o programa se tornar mais interativo com o usuï¿½rio. 
 		
 					system("cls");
 							
@@ -134,7 +135,7 @@ int main (){
 							recorrente = recorrente +1;	
 						}
 						
-						//Esse "if" checa se o ano da criança foi o mesmo do ano recorrente, e adiciona 1 caso seja.
+						//Esse "if" checa se o ano da crianï¿½a foi o mesmo do ano recorrente, e adiciona 1 caso seja.
 																		
 					system("cls");
 					
@@ -142,17 +143,17 @@ int main (){
 						printf("(Separe as casas decimais utilizando ponto)\n\n");
 						scanf("%f", &peso);
 						
-						//A variável peso é pedida no problema, porém não é utilizada em mais nenhum lugar do código.
+						//A variï¿½vel peso ï¿½ pedida no problema, porï¿½m nï¿½o ï¿½ utilizada em mais nenhum lugar do cï¿½digo.
 
 					respincorreta = 0;
 					fflush(stdin);
 					
-					//O buffer do teclado é limpo aqui, pois a variável float apresentou alguns erros nos testes.
+					//O buffer do teclado ï¿½ limpo aqui, pois a variï¿½vel float apresentou alguns erros nos testes.
 					
 					do{							
 						system("cls");
 						sexo = 0;
-						//A cada ciclo, as variáveis para a entrada da questão são zeradas.		
+						//A cada ciclo, as variï¿½veis para a entrada da questï¿½o sï¿½o zeradas.		
 						
 						if (respincorreta == 0){
 							printf("Qual o sexo de %s?\n\n\n\n\n", crianca);
@@ -179,7 +180,7 @@ int main (){
 								respincorreta = respincorreta + 1;
 							}
 							
-							//Nessa parte do código é contabilizada o sexo das crianças: feminino ou masculino.
+							//Nessa parte do cï¿½digo ï¿½ contabilizada o sexo das crianï¿½as: feminino ou masculino.
 								
 					}while(sexo != 1 && sexo != 2);
 					
@@ -194,7 +195,7 @@ int main (){
 						if (respincorreta == 0){
 							printf("%s possui microcefalia?\n\n\n\n\n", crianca);
 							printf("[1] - Sim.\n");
-							printf("[2] - Não.\n\n");
+							printf("[2] - Nï¿½o.\n\n");
 							scanf("%d", &microcefalia);
 						}
 								
@@ -202,7 +203,7 @@ int main (){
 							printf("%s possui microcefalia?\n\n\n", crianca);
 							printf("Responta incorreta. Digite novamente.\n\n");
 							printf("[1] - Sim.\n");
-							printf("[2] - Não.\n\n");
+							printf("[2] - Nï¿½o.\n\n");
 							scanf("%d", &microcefalia);
 						}
 						
@@ -215,7 +216,7 @@ int main (){
 								}
 								
 								
-							//É contabilizado as crianças que tem microcefalia.
+							//ï¿½ contabilizado as crianï¿½as que tem microcefalia.
 							
 					}while(microcefalia != 1 && microcefalia != 2);
 							
@@ -227,16 +228,16 @@ int main (){
 						fflush(stdin);
 									
 						if (respincorreta == 0){
-							printf("%s possui problema cardíaco?\n\n\n\n\n", crianca);			
+							printf("%s possui problema cardï¿½aco?\n\n\n\n\n", crianca);			
 							printf("[1] - Sim.\n");
-							printf("[2] - Não.\n\n");
+							printf("[2] - Nï¿½o.\n\n");
 							scanf("%d", &problemacardiaco);}
 								
 						else if (respincorreta != 0){
-							printf("%s possui problema cardíaco?\n\n\n", crianca);
+							printf("%s possui problema cardï¿½aco?\n\n\n", crianca);
 							printf("Responta incorreta. Digite novamente.\n\n");
 							printf("[1] - Sim.\n");
-							printf("[2] - Não.\n\n");
+							printf("[2] - Nï¿½o.\n\n");
 							scanf("%d", &problemacardiaco);}
 							
 							if (problemacardiaco == 1){
@@ -246,7 +247,7 @@ int main (){
 								respincorreta = respincorreta + 1;
 							}
 							
-							//Contabilização das crianças que tem problema cardíaco
+							//Contabilizaï¿½ï¿½o das crianï¿½as que tem problema cardï¿½aco
 								
 					}while(problemacardiaco != 1 && problemacardiaco != 2);
 							
@@ -259,7 +260,7 @@ int main (){
 						if (respincorreta == 0){
 							printf("%s possui diabetes?\n\n\n\n\n", crianca);
 							printf("[1] - Sim.\n");
-							printf("[2] - Não.\n\n");
+							printf("[2] - Nï¿½o.\n\n");
 							scanf("%d", &diabetes);
 						}
 								
@@ -267,7 +268,7 @@ int main (){
 							printf("%s possui diabetes?\n\n\n", crianca);
 							printf("Responta incorreta. Digite novamente.\n\n");
 							printf("[1] - Sim.\n");
-							printf("[2] - Não.\n\n");
+							printf("[2] - Nï¿½o.\n\n");
 							scanf("%d", &diabetes);
 						}
 							
@@ -279,7 +280,7 @@ int main (){
 							}
 									
 									
-							//Contabilização das crianças com diabetes.
+							//Contabilizaï¿½ï¿½o das crianï¿½as com diabetes.
 							
 					}while(diabetes != 1 && diabetes != 2);
 							
@@ -290,17 +291,17 @@ int main (){
 						system("cls");
 									
 						if (respincorreta == 0){
-							printf("%s possui plano de saúde?\n\n\n\n\n", crianca);
+							printf("%s possui plano de saï¿½de?\n\n\n\n\n", crianca);
 							printf("[1] - Sim.\n");
-							printf("[2] - Não.\n\n");
+							printf("[2] - Nï¿½o.\n\n");
 							scanf("%d", &plano);
 						}
 									
 						else if (respincorreta != 0){
-							printf("%s possui plano de saúde?\n\n\n", crianca);
+							printf("%s possui plano de saï¿½de?\n\n\n", crianca);
 							printf("Responta incorreta. Digite novamente.\n\n");
 							printf("[1] - Sim.\n");
-							printf("[2] - Não.\n\n");
+							printf("[2] - Nï¿½o.\n\n");
 							scanf("%d", &plano);
 						}
 								
@@ -311,7 +312,7 @@ int main (){
 								respincorreta = respincorreta + 1;
 							}
 									
-							//Contabilização das crianças sem plano de saúde.
+							//Contabilizaï¿½ï¿½o das crianï¿½as sem plano de saï¿½de.
 							
 					}while(plano != 1 && plano != 2);
 								
@@ -321,18 +322,18 @@ int main (){
 					printf("\n\n\n\n\n\n\n\n\n\nCadastro realizado com sucesso.\n\n");
 					cadastradas = cadastradas + 1;
 					
-					//Finalização com a contabilidade do número de cadastros.
+					//Finalizaï¿½ï¿½o com a contabilidade do nï¿½mero de cadastros.
 								
 				system("pause");
 				
-				//O sistema pausa e o usuário tem que apertar qualquer tecla para continuar.
+				//O sistema pausa e o usuï¿½rio tem que apertar qualquer tecla para continuar.
 				
 				break;
 				
 															
 					case 2:
 						
-						//Relatório gerado pelos cadastros
+						//Relatï¿½rio gerado pelos cadastros
 						
 						fflush(stdin);
 							
@@ -349,46 +350,46 @@ int main (){
 						
 						//Amostra de dados:
 									
-						printf("Relatório do dia %2d/%2d/%4d realizado no bairro %s \n\n\n\n", dia, mes, ano, bairro);
+						printf("Relatï¿½rio do dia %2d/%2d/%4d realizado no bairro %s \n\n\n\n", dia, mes, ano, bairro);
 		
-						printf("Total de crianças cadastradas: %d \n\n", cadastradas);
+						printf("Total de crianï¿½as cadastradas: %d \n\n", cadastradas);
 	
-						printf("Total de crianças nascidas no ano recorrente: %d \n\n", recorrente);
+						printf("Total de crianï¿½as nascidas no ano recorrente: %d \n\n", recorrente);
 								
-						printf("Percentual de crianças do sexo feminino: %.2f %% \n", percentfem);
+						printf("Percentual de crianï¿½as do sexo feminino: %.2f %% \n", percentfem);
 		
-						printf("(%d de %d crianças) \n\n", feminino, cadastradas);
+						printf("(%d de %d crianï¿½as) \n\n", feminino, cadastradas);
 									
-						printf("Percentual de crianças do sexo masculino: %.2f %% \n", percentmasc);
+						printf("Percentual de crianï¿½as do sexo masculino: %.2f %% \n", percentmasc);
 								
-						printf("(%d de %d crianças) \n\n", masculino, cadastradas);
+						printf("(%d de %d crianï¿½as) \n\n", masculino, cadastradas);
 									
-						printf("Percentual de crianças com microcefalia: %.2f %% \n", percentMP);
+						printf("Percentual de crianï¿½as com microcefalia: %.2f %% \n", percentMP);
 									
-						printf("(%d de %d crianças) \n\n", microcefaliapositivo, cadastradas);
+						printf("(%d de %d crianï¿½as) \n\n", microcefaliapositivo, cadastradas);
 									
-						printf("Percentual de crianças com problema cardíaco: %.2f %% \n", percentCP);
+						printf("Percentual de crianï¿½as com problema cardï¿½aco: %.2f %% \n", percentCP);
 									
-						printf("(%d de %d crianças) \n\n", cardiacopositivo, cadastradas);
+						printf("(%d de %d crianï¿½as) \n\n", cardiacopositivo, cadastradas);
 									
-						printf("Percentual de crianças com diabetes: %.2f %%\n", percentDP);
+						printf("Percentual de crianï¿½as com diabetes: %.2f %%\n", percentDP);
 									
-						printf("(%d de %d crianças) \n\n", diabetespositivo, cadastradas);
+						printf("(%d de %d crianï¿½as) \n\n", diabetespositivo, cadastradas);
 									
-						printf("Percentual de crianças sem plano de saúde: %.2f %%\n", percentPN);
+						printf("Percentual de crianï¿½as sem plano de saï¿½de: %.2f %%\n", percentPN);
 									
-						printf("(%d de %d crianças) \n\n\n\n\n", planonegativo, cadastradas);
+						printf("(%d de %d crianï¿½as) \n\n\n\n\n", planonegativo, cadastradas);
 						
 					system("pause");					
 					
-					//O sistema pausa e o usuário tem que apertar qualquer tecla para continuar.
+					//O sistema pausa e o usuï¿½rio tem que apertar qualquer tecla para continuar.
 								
 					break;				
 						
 			}
 			
 			
-	// O programa vai funcionar até que o usuário de a entrada 0 no menu.
+	// O programa vai funcionar atï¿½ que o usuï¿½rio de a entrada 0 no menu.
 		
 	}while(menu != 0);
 			
